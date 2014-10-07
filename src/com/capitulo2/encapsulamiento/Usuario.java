@@ -3,49 +3,43 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package com.capitulo2.encapsulamiento;
 
 /**
- *
- * @author campitos
+ *Encapsular la clase
+ * @author T
  */
 public class Usuario {
+    //regla no.1 atributos con modificador private 
+    private int id;
     private String nombre;
-    private float sueloBase;
-    private int horasTrabajadas;
-
-    public Usuario() {
+    private String email;
+    
+    //regla 2 agregar los metodos accesorios (getter's)
+    public int getId(){
+        return id;
     }
     
-
-    public Usuario(String nombre, float sueloBase, int horasTrabajadas) {
-        this.nombre = nombre;
-        this.sueloBase = sueloBase;
-        this.horasTrabajadas = horasTrabajadas;
-    }
-
-    public int getHorasTrabajadas() {
-        return horasTrabajadas;
-    }
-
-    public void setHorasTrabajadas(int horasTrabajadas) {
-        this.horasTrabajadas = horasTrabajadas;
-    }
-
-    public String getNombre() {
+    public String getNombre(){
         return nombre;
     }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    
+    public String getEmail(){
+        return email;
     }
-
-    public float getSueloBase() {
-        return sueloBase;
+    
+    //crear por cada atributo su metodo mutador setter's
+    public void setId(int id){
+        this.id=id;              
     }
-
-    public void setSueloBase(float sueloBase) {
-        this.sueloBase = sueloBase;
+    
+    public void serNombre(String nombre){
+        this.nombre=nombre;
+    }
+    
+    public void setEmail(String email){
+        this.email=email;
     }
     
 }
